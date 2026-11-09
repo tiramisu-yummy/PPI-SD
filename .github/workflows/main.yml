@@ -23,3 +23,8 @@
            if: github.actor == 'MEMBER1'
            run: |
              sed -i '/<\/body>/i <p>Updated by Member 1 on '"$(date)"'</p>' index.html
+
+         - name: Update index.html (Member 2)
+           if: github.actor == 'MEMBER2'
+           run: |
+             sed -i '/<\/body>/i <p>Updated by Member 2 on '"$(date)"'</p>' index.html
